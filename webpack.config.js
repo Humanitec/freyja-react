@@ -42,7 +42,7 @@ module.exports = {
     extensions: ["*", ".js", ".jsx"],
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
     alias: {
-      freyja: path.resolve(__dirname, './src/freyja'),
+      freyja: path.resolve(__dirname, './projects/freyja-react/src/lib'),
       colors$: path.resolve(__dirname, './src/theme/colors.js')
     }
   },
@@ -59,13 +59,13 @@ module.exports = {
       hotOnly: true
   },
   plugins: [
-      new webpack.HotModuleReplacementPlugin(),
-      new HtmlWebPackPlugin({
-          template: "./src/index.html",
-          filename: "./index.html"
-      }),
-      new CopyPlugin([
-          { from: 'environment.js', to: '' },
-      ]),
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebPackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html"
+    }),
+    new CopyPlugin([
+      { from: 'environment.js', to: '' },
+    ]),
   ]
 };
