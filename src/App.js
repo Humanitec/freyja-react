@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import FjButton from 'freyja/Button/Button';
-import FjMenu from 'freyja/Menu/Menu';
-import FjCard from 'freyja/Card/Card';
-import FjInputField from 'freyja/InputField/InputField';
+import FjButton from 'freyja/Button';
+import FjMenu from 'freyja/Menu';
+import FjCard from 'freyja/Card';
+import FjInputField from 'freyja/InputField';
 
 function App() {
   const [menuOpened, toggleMenu] = useState(false);

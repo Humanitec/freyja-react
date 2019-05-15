@@ -44,7 +44,7 @@ module.exports = {
     extensions: ["*", ".js", ".jsx"],
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
     alias: {
-      freyja: path.resolve(__dirname, './packages/freyja-react/src/lib'),
+      freyja: path.resolve(__dirname, './lib/src'),
       colors$: path.resolve(__dirname, './src/theme/colors.js')
     }
   },
