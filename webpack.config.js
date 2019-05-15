@@ -11,9 +11,11 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: [
+            /(node_modules|bower_components)/,
+        ],
         loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
+        options: { presets: ["@babel/env"] },
       },
       {
         test: /\.(css|scss)$/,
@@ -23,7 +25,7 @@ module.exports = {
           "sass-loader"
         ]
       },
-      { 
+      {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
           "file-loader",
@@ -42,7 +44,7 @@ module.exports = {
     extensions: ["*", ".js", ".jsx"],
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
     alias: {
-      freyja: path.resolve(__dirname, './projects/freyja-react/src/lib'),
+      freyja: path.resolve(__dirname, './packages/freyja-react/src/lib'),
       colors$: path.resolve(__dirname, './src/theme/colors.js')
     }
   },
