@@ -56,7 +56,8 @@
     "build-freyja": "rm -rf ./dist && webpack --mode production --config webpack.lib.config.js",
     "createFile": "gulp createFile  --gulpfile gulpfile.js --cwd ./",
     "init": "gulp init --gulpfile gulpfile.js --cwd ./ && npm run createFile",
-    "styleguidist": "npx styleguidist build && npx styleguidist server"
+    "styleguidist": "npx styleguidist build && npx styleguidist server",
+    "cleanup": "rm -rf ./dist && rm -rf ./showcase && rm -rf ./node_modules"
   },
   "jest": {
     "setupFiles": [
