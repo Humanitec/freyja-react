@@ -2,7 +2,7 @@
   "name": "freyja-react",
   "version": "0.1.3",
   "description": "UI component library built using the React framework",
-  "main": "dist/freyja.js",
+  "main": "dist/freyja.bundle.js",
   "dependencies": {
     "gulp": "^4.0.0",
     "gulp-git": "^2.9.0",
@@ -50,9 +50,10 @@
     "start": "webpack-dev-server --mode development",
     "test": "jest",
     "serve": "./node_modules/.bin/serve -s dist",
+    "serve-prod": "./node_modules/.bin/serve -s showcase",
     "build": "webpack --mode development",
     "build-prod": "webpack --mode production",
-    "build-freyja": "webpack --mode production --config webpack.lib.config.js",
+    "build-freyja": "rm -rf ./dist && webpack --mode production --config webpack.lib.config.js",
     "createFile": "gulp createFile  --gulpfile gulpfile.js --cwd ./",
     "init": "gulp init --gulpfile gulpfile.js --cwd ./ && npm run createFile",
     "styleguidist": "npx styleguidist build && npx styleguidist server"

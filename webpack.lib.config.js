@@ -19,7 +19,7 @@ module.exports = {
         // The ? in the regex just means "optional"
         test: /\.js$/,
         // Don't bother spending time transpiling your installed packages
-        // exclude: /node_modules/,
+        exclude: /node_modules/,
         // This is where we tell webpack to use babel to transpile our JS.
         // The configuration can go here, but in this case it's in ./babelrc.js
         use: {
@@ -66,9 +66,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/'),
     publicPath: '',
     // You can do fun things here like use the [hash] keyword to generate unique
-    // filenames, but for this purpose freyja.js is fine. This file and path will
+    // filenames, but for this purpose freyja.bundle.js is fine. This file and path will
     // be what you put in package.json's "main" field
-    filename: 'freyja.js',
+    filename: 'freyja.bundle.js',
     // This field determines how things are importable when installed from other
     // sources. UMD may not be correct now and there is an open issue to fix this,
     // but until then, more reading can be found here:

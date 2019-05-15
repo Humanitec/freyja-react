@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
-
-import FjButton from 'freyja/Button';
-import FjCard from 'freyja/Card';
-import FjContentSwitcher from 'freyja/ContentSwitcher';
-import FjInlineEditor from 'freyja/InlineEditor';
-import FjInputField from 'freyja/InputField';
-import FjMenu from 'freyja/Menu';
+import { FjButton } from 'freyja/Button';
+import { FjCard } from 'freyja/Card';
+import { FjContentSwitcher } from 'freyja/ContentSwitcher';
+import { FjInlineEditor } from 'freyja/InlineEditor';
+import { FjInputField } from 'freyja/InputField';
+import { FjMenu } from 'freyja/Menu';
 
 function App() {
   const [menuOpened, toggleMenu] = useState(false);
