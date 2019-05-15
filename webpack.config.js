@@ -45,7 +45,7 @@ module.exports = {
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
     alias: {
       freyja: path.resolve(__dirname, './lib/src'),
-      colors$: path.resolve(__dirname, './src/theme/colors.js')
+      theme$: path.resolve(__dirname, './lib/theme/index.js')
     }
   },
   output: {
