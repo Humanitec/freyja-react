@@ -1,6 +1,6 @@
 {
   "name": "freyja-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "UI component library built using the React framework",
   "main": "dist/freyja.js",
   "dependencies": {
