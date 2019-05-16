@@ -71,7 +71,6 @@
       "node_modules",
       "<rootDir>/src",
       "src",
-      "<rootDir>/src/styles",
       "<rootDir>",
       "<rootDir>/lib/theme"
     ],
