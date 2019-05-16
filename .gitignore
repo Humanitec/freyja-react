@@ -2,4 +2,7 @@
 /node_modules
 /showcase
 package-lock.json
-.idea
+.idea/
+__snapshots__/
+__mocks__/
+coverage/
