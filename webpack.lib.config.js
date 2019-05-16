@@ -69,5 +69,9 @@ module.exports = {
     // https://webpack.js.org/configuration/output/#output-librarytarget
     libraryTarget: 'commonjs2',
   },
-  externals: { 'react': 'commonjs react' }  // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
+  externals: [
+    // use the dependencies of our parent project instead of our own project
+    { 'react': 'commonjs react' },
+    { 'styled-components': 'commonjs styled-components' }
+  ]
 };
