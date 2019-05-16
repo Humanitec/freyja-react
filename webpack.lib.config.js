@@ -24,6 +24,7 @@ module.exports = {
         // The configuration can go here, but in this case it's in ./babelrc.js
         use: {
           loader: 'babel-loader',
+          options: { presets: ["@babel/env"] },
         },
       },
       {
