@@ -1,6 +1,6 @@
 {
   "name": "freyja-react",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "UI component library built using the React framework",
   "main": "dist/freyja.bundle.js",
   "devDependencies": {
@@ -31,11 +31,9 @@
     "polished": "^3.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-hot-loader": "^4.6.3",
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
     "react-styleguidist": "^9.0.8",
-    "redux-saga": "^1.0.0",
     "sass-loader": "^7.1.0",
     "serve": "^11.0.0",
     "style-loader": "^0.23.1",
