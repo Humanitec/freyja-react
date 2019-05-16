@@ -1,7 +1,5 @@
 const path = require("path");
-const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: ["babel-polyfill", "./src/index.js"] ,
@@ -10,20 +8,14 @@ module.exports = {
     module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: [
-            /(node_modules|bower_components)/,
-        ],
+        test: /\.(js)$/,
+        exclude: /node_modules/,
         loader: "babel-loader",
         options: { presets: ["@babel/env"] },
       },
       {
-        test: /\.(css|scss)$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ]
+        test: /\.(css)$/,
+        use: { loader: "css-loader" }
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -61,13 +53,9 @@ module.exports = {
       hotOnly: true
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
     }),
-    new CopyPlugin([
-      { from: 'environment.js', to: '' },
-    ]),
   ]
 };

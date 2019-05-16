@@ -1,6 +1,10 @@
 {
   "name": "freyja-react",
-  "version": "0.1.10",
+  "version": "0.1.11",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Humanitec/freyja-react.git"
+  },
   "description": "UI component library built using the React framework",
   "main": "dist/freyja.bundle.js",
   "devDependencies": {
@@ -15,6 +19,8 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.6.0",
     "polished": "^3.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -38,6 +44,7 @@
     "build-prod": "webpack --mode production",
     "build-freyja": "rm -rf ./dist && webpack --mode production --config webpack.lib.config.js",
     "styleguidist": "npx styleguidist build && npx styleguidist server",
+    "showcase": "npm run build-prod && npm run serve-prod",
     "cleanup": "rm -rf ./dist && rm -rf ./showcase && rm -rf ./node_modules"
   },
   "jest": {
