@@ -1,11 +1,9 @@
-.babelrc
 .drone.yml
 .env
 .idea
 .gitignore
 Dockerfile
 environment.js
-gulpfile.js
 initialize_container.sh
 nginx.conf
 src

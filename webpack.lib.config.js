@@ -31,15 +31,8 @@ module.exports = {
         // I haven't used SCSS in the base example, but it's here for you if you
         // want! If you want to use CSS, you can change this next like's regex to
         // /\.(css|scss)$/ or even just /\.css$/
-        test: /\.scss$/,
-        use: [
-          // These three libraries are commonly used together to turn Sass into
-          // CSS, then be able to load the CSS directly with imports. From there
-          // It gets put in the DOM for you.
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'sass-loader' },
-        ],
+        test: /\.css$/,
+        use: { loader: 'css-loader' }
       },
       {
         // Some image formats so you can import images
@@ -55,7 +48,7 @@ module.exports = {
   },
   // Here we define explicitly the file types we intend to deal with
   resolve: {
-    extensions: ['.scss', '.js', '.json', '.png', '.gif', '.jpg', '.svg'],
+    extensions: ['.css', '.js', '.json', '.png', '.gif', '.jpg', '.svg'],
     alias: {
       theme$: path.resolve(__dirname, './lib/theme/index.js')
     }
@@ -74,6 +67,7 @@ module.exports = {
     // sources. UMD may not be correct now and there is an open issue to fix this,
     // but until then, more reading can be found here:
     // https://webpack.js.org/configuration/output/#output-librarytarget
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
   },
+  externals: { 'react': 'commonjs react' }  // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
 };
