@@ -1,7 +1,10 @@
+__mocks__/
+__snapshots__/
 .drone.yml
 .env
 .idea
 .gitignore
+coverage
 Dockerfile
 initialize_container.sh
 nginx.conf
