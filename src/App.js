@@ -5,8 +5,10 @@ import { FjContentSwitcher } from 'freyja/ContentSwitcher';
 import { FjInlineEditor } from 'freyja/InlineEditor';
 import { FjInputField } from 'freyja/InputField';
 import { FjMenu } from 'freyja/Menu';
+import { FjTable } from 'freyja/Table';
 import { theme } from 'theme';
 import styled from 'styled-components';
+import { rem } from 'polished';
 
 const Wrapper = styled.div`
   h1 {
@@ -18,6 +20,10 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    button {
+      margin: ${rem(4)} 0;
+    }
   }
 
   section:nth-child(2n+0) {
@@ -142,6 +148,20 @@ function App() {
             menuItems={options}>
             <FjButton secondary onClick={() => toggleMenu(!menuOpened)}>Toggle menu</FjButton>
           </FjMenu>
+        </section>
+        <section>
+          <h3>Freyja table</h3>
+          <FjTable
+            columns={[
+              {label: 'Full name', prop: 'name', template: (item) => {return <FjButton size="micro">{item}</FjButton>}, flex: '1'},
+              {label: 'Email', prop: 'email', template: (item) => {return <b>{item}</b>},  flex: '3'},
+              {label: 'Last activity', prop: 'activity', template: (item) => {return <div styleName={{'color': '#ccc'}}>{item}</div>}, flex: '1'},
+            ]}
+            rows={[
+              {name: 'Andrew Shortall', email: 'andrew.shortall@humanitec.com', activity: 'Today'},
+              {name: 'Aziz Haddad', email: 'aziz@humanitec.com', activity: 'Yesterday'},
+              {name: 'Mughees Ilyas', email: 'mughees@humanitec.com', activity: 'Today'}
+            ]}/>
         </section>
       </div>
     </Wrapper>
