@@ -17,7 +17,7 @@ const TopBarWrapper = styled.div`
   z-index: 3;
   align-items: center;
   padding: 0 ${rem(24)};
-`
+`;
 
 /**
  * Component for the top bar header.
@@ -25,7 +25,7 @@ const TopBarWrapper = styled.div`
 function TopBar() {
   return (
     <TopBarWrapper>
-      <SVGInline svg={logo} height="50%" width="50%" />
+      <SVGInline svg={logo} height="50%" width="150px" />
     </TopBarWrapper>
   )
 }
