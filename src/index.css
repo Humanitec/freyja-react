@@ -16,7 +16,7 @@ h1 {
 }
 
 section {
-  padding: 1.5rem 3rem;
+  padding: 0 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -24,10 +24,6 @@ section {
 
 section > button {
   margin: 4px 0;
-}
-
-section:nth-child(2n+0) {
-  background-color: #F0F0F0;
 }
 
 .app {

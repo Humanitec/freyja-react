@@ -11,7 +11,8 @@ function InputFieldPage() {
         id="input" type="text" label="Label" value={inputValue} placeholder="placeholder"
         onChange={e => setInputValue(e.target.value)} error={!inputValue ? 'Value required' : ''} required="true" />
       <Highlight language="javascript">
-{`
+{
+`const [inputValue, setInputValue] = useState('');
 <FjInputField
   id="input"
   type="text"
@@ -20,8 +21,8 @@ function InputFieldPage() {
   placeholder="placeholder"
   onChange={e => setInputValue(e.target.value)}
   error={!inputValue ? 'Value required' : ''}
-  required="true" />
-`}
+  required="true" />`
+}
       </Highlight>
     </section>
   )

@@ -4,34 +4,38 @@ import { FjMenu } from 'freyja/Menu';
 import Highlight from 'react-highlight';
 
 function MenuPage() {
-  const [menuOpened, toggleMenu] = useState(false);
-  const options = [
-    { value: 'option1', label: 'Option 1' },
-    { value: 'option2', label: 'Option 2' },
-    { value: 'option3', label: 'Option 3' }
-  ];
+  const [open, setOpen] = useState(false);
   return (
     <section>
     <h3>Menu</h3>
     <FjMenu
       xPosition="right"
       yPosition="center"
-      open={menuOpened}
-      setOpen={toggleMenu}
-      menuItems={options}>
-      <FjButton secondary onClick={() => toggleMenu(!menuOpened)}>Toggle menu</FjButton>
+      open={open}
+      setOpen={setOpen}
+      menuItems={[
+        { value: 'option1', label: 'Option 1' },
+        { value: 'option2', label: 'Option 2' },
+        { value: 'option3', label: 'Option 3' }
+      ]}>
+      <FjButton secondary onClick={() => setOpen(!open)}>Toggle menu</FjButton>
     </FjMenu>
     <Highlight language="javascript">
-{`
+{
+`const [open, setOpen] = useState(false);
 <FjMenu
   xPosition="right"
   yPosition="center"
-  open={menuOpened}
-  setOpen={toggleMenu}
-  menuItems={options}>
-  <FjButton secondary onClick={() => toggleMenu(!menuOpened)}>Toggle menu</FjButton>
-</FjMenu>
-`}
+  open={open}
+  setOpen={setOpen}
+  menuItems={[
+    { value: 'option1', label: 'Option 1' },
+    { value: 'option2', label: 'Option 2' },
+    { value: 'option3', label: 'Option 3' }
+  ]}>
+  <FjButton secondary onClick={() => setOpen(!open)}>Toggle menu</FjButton>
+</FjMenu>`
+}
     </Highlight>
   </section>
   )

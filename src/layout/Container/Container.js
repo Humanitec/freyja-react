@@ -9,11 +9,13 @@ import TablePage from '../../pages/Table'
 import styled from 'styled-components'
 import TopBar from '../TopBar/TopBar'
 import NavBar from '../NavBar/NavBar'
+import { theme } from 'theme'
 
 const ContainerWrapper = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
+  background-color: ${theme.base};
 
   .container {
     display: flex;

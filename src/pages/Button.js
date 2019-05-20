@@ -10,21 +10,21 @@ function ButtonPage() {
       <FjButton>Primary</FjButton>
       <FjButton variant="secondary">Secondary</FjButton>
       <Highlight language="javascript">
-{`
-<FjButton>Primary</FjButton>
-<FjButton variant="secondary">Secondary</FjButton>
-`}
+{
+`<FjButton>Primary</FjButton>
+<FjButton variant="secondary">Secondary</FjButton>`
+}
       </Highlight>
       <h4>Sizes</h4>
       <FjButton>Default</FjButton>
       <FjButton size="small">Small</FjButton>
       <FjButton size="micro">Micro</FjButton>
       <Highlight language="javascript">
-{`
-<FjButton>Default</FjButton>
+{
+`<FjButton>Default</FjButton>
 <FjButton size="small">Small</FjButton>
-<FjButton size="micro">Micro</FjButton>
-`}
+<FjButton size="micro">Micro</FjButton>`
+}
       </Highlight>
     </section>
   )

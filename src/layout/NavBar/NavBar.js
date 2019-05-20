@@ -8,7 +8,7 @@ const NavBarWrapper = styled.div`
   max-width: ${rem(220)};
   width: ${rem(220)};
   height: 100%;
-  background-color: ${theme.base};
+  background-color: ${theme.baseLightest};
   min-height: calc(100vh - ${rem(60)});
   transition: max-width 0.3s ease-in-out;
   margin-top: ${rem(-60)};
@@ -28,6 +28,9 @@ const NavBarWrapper = styled.div`
     &__elements {
       flex: 3;
     }
+    &__heading {
+      padding: 0 ${rem(8)};
+    }
   }
 
   ${props => props.hidden && css`
@@ -37,10 +40,14 @@ const NavBarWrapper = styled.div`
   `}
 `
 const NavItem = styled.div`
-  padding: ${rem(8)};
+  padding: ${rem(12)} ${rem(8)};
+  border-left: ${rem(5)} solid transparent;
   cursor: pointer;
-  ${props => props.active && css`
+  &:hover {
     background-color: ${theme.primaryOverlay};
+  }
+  ${props => props.active && css`
+    border-left-color: ${theme.primary};
   `}
 `
 
@@ -64,13 +71,14 @@ function NavBar({page, setPage}) {
       key={item.value}
       id={item.value}
       active={page === item.value}
-      onClick={(e) => {setPage(item.value); console.log(e.target.value)}}>{item.label}</NavItem>);
+      onClick={(e) => setPage(item.value)}>{item.label}</NavItem>);
   }
   
   return (
     <NavBarWrapper>
       <div className="nav-bar__container">
         <div className="nav-bar__elements">
+          <h3 className="nav-bar__heading">Components</h3>
           {items}
         </div>
       </div>

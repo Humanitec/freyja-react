@@ -47,38 +47,38 @@ function InlineEditorPage() {
       onChange={e => setInlinePValue(e)} />
   
     <Highlight language="javascript">
-{`
+{
+`<FjInlineEditor
+  id="inline-h1"
+  tag="h1"
+  placeholder="Enter text"
+  value={inlineH1Value}
+  onChange={e => setInlineH1Value(e)} />
 <FjInlineEditor
-id="inline-h1"
-tag="h1"
-placeholder="Enter text"
-value={inlineH1Value}
-onChange={e => setInlineH1Value(e)} />
+  id="inline-h2"
+  tag="h2"
+  placeholder="Enter text"
+  value={inlineH2Value}
+  onChange={e => setInlineH2Value(e)} />
 <FjInlineEditor
-id="inline-h2"
-tag="h2"
-placeholder="Enter text"
-value={inlineH2Value}
-onChange={e => setInlineH2Value(e)} />
+  id="inline-h3"
+  tag="h3"
+  placeholder="Enter text"
+  value={inlineH3Value}
+  onChange={e => setInlineH3Value(e)} />
 <FjInlineEditor
-id="inline-h3"
-tag="h3"
-placeholder="Enter text"
-value={inlineH3Value}
-onChange={e => setInlineH3Value(e)} />
+  id="inline-h4"
+  tag="h4"
+  placeholder="Enter text"
+  value={inlineH4Value}
+  onChange={e => setInlineH4Value(e)} />
 <FjInlineEditor
-id="inline-h4"
-tag="h4"
-placeholder="Enter text"
-value={inlineH4Value}
-onChange={e => setInlineH4Value(e)} />
-<FjInlineEditor
-id="inline-p"
-tag="p"
-placeholder="Enter text"
-value={inlinePValue}
-onChange={e => setInlinePValue(e)} />
-`}
+  id="inline-p"
+  tag="p"
+  placeholder="Enter text"
+  value={inlinePValue}
+  onChange={e => setInlinePValue(e)} />`
+}
     </Highlight>
     <h3>Labeled</h3>
     <FjInlineEditor
@@ -89,14 +89,14 @@ onChange={e => setInlinePValue(e)} />
       onChange={e => setInlineLabelValue(e)} />
 
     <Highlight language="javascript">
-{`
-<FjInlineEditor
-label="Label"
-id="with-label"
-placeholder="Enter text"
-value={inlineLabelValue}
-onChange={e => setInlineLabelValue(e)} />
-`}
+{
+`<FjInlineEditor
+  label="Label"
+  id="with-label"
+  placeholder="Enter text"
+  value={inlineLabelValue}
+  onChange={e => setInlineLabelValue(e)} />`
+}
     </Highlight>
   </section>
   )

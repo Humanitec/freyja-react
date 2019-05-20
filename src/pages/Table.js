@@ -9,29 +9,33 @@ function TablePage() {
       <h3>Table</h3>
       <FjTable
         columns={[
-          { label: 'Full name', prop: 'name', template: (item) => {return <FjButton size="micro">{item}</FjButton>}, flex: '1' },
-          { label: 'Email', prop: 'email', template: (item) => {return <b>{item}</b>},  flex: '3' },
-          { label: 'Last activity', prop: 'activity', template: (item) => {return <div style={{'color': '#ccc'}}>{item}</div>}, flex: '1' },
+          { label: 'Full name', prop: 'name', template: (item) => {return <b>{item}</b>}, flex: '1' },
+          { label: 'Email', prop: 'email', flex: '3' },
+          { label: 'Last activity', prop: 'activity', template: (item) => {return <small style={{'color': '#aaa'}}>{item}</small>}, flex: '1' },
+          { label: 'Options', prop: 'options', template: () => {return <FjButton variant="secondary" size="small">...</FjButton>}, flex: 'none' },
         ]}
         rows={[
-          { name: 'Andrew Shortall', email: 'andrew.shortall@humanitec.com', activity: 'Today' },
-          { name: 'Aziz Haddad', email: 'aziz@humanitec.com', activity: 'Yesterday' },
-          { name: 'Mughees Ilyas', email: 'mughees@humanitec.com', activity: 'Today' }
+          { name: 'Arthur Bailey', email: 'arthur-93@example.com', activity: 'Today' },
+          { name: 'Billy West', email: 'billy.west@example.com', activity: 'Yesterday' },
+          { name: 'Douglas Weaver', email: 'douglas-89@example.com', activity: '2 days ago' }
         ]}
       />
       <Highlight language="javascript">
-{`<FjTable
+{
+`<FjTable
   columns={[
-    { label: 'Full name', prop: 'name', template: (item) => {return <FjButton size="micro">{item}</FjButton>}, flex: '1' },
-    { label: 'Email', prop: 'email', template: (item) => {return <b>{item}</b>},  flex: '3' },
-    { label: 'Last activity', prop: 'activity', template: (item) => {return <div style={{'color': '#ccc'}}>{item}</div>}, flex: '1' },
+    { label: 'Full name', prop: 'name', template: (item) => {return <b>{item}</b>}, flex: '1' },
+    { label: 'Email', prop: 'email', flex: '3' },
+    { label: 'Last activity', prop: 'activity', template: (item) => {return <small style={{'color': '#aaa'}}>{item}</small>}, flex: '1' },
+    { label: 'Options', prop: 'options', template: () => {return <FjButton variant="secondary" size="small">...</FjButton>}, flex: 'none' },
   ]}
   rows={[
-    { name: 'Andrew Shortall', email: 'andrew.shortall@humanitec.com', activity: 'Today' },
-    { name: 'Aziz Haddad', email: 'aziz@humanitec.com', activity: 'Yesterday' },
-    { name: 'Mughees Ilyas', email: 'mughees@humanitec.com', activity: 'Today' }
+    { name: 'Arthur Bailey', email: 'arthur-93@example.com', activity: 'Today' },
+    { name: 'Billy West', email: 'billy.west@example.com', activity: 'Yesterday' },
+    { name: 'Douglas Weaver', email: 'douglas-89@example.com', activity: '2 days ago' }
   ]}
-/>`}
+/>`
+}
       </Highlight>
     </section>
   );

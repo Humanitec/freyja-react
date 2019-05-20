@@ -18,11 +18,11 @@ function ContentSwitcherPage() {
       <FjContentSwitcher options={options} active={switcherStateSmall} size="small" />
       <FjContentSwitcher options={options} active={switcherStateMicro} size="micro" />
       <Highlight language="javascript">
-{`
-<FjContentSwitcher options={options} active={switcherStateDefault} />
+{
+`<FjContentSwitcher options={options} active={switcherStateDefault} />
 <FjContentSwitcher options={options} active={switcherStateSmall} size="small" />
-<FjContentSwitcher options={options} active={switcherStateMicro} size="micro" />
-`}
+<FjContentSwitcher options={options} active={switcherStateMicro} size="micro" />`
+}
       </Highlight>
     </section>
   )

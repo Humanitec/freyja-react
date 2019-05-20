@@ -2,21 +2,21 @@ import React from 'react'
 import { theme } from 'theme'
 import styled from 'styled-components'
 import { rem } from 'polished'
+import SVGInline from 'react-svg-inline'
+import logo from '../../assets/freyja.svg'
 
-const topBarHeight = rem(60);
+const topBarHeight = rem(80);
 
 const TopBarWrapper = styled.div`
   height: ${topBarHeight};
   max-height: ${topBarHeight};
   display: flex;
-  background-color: ${theme.base};
+  background-color: ${theme.baseLighter};
+  border-bottom: ${rem(1)} solid ${theme.baseDarker};
   transition: all linear 0.3s;
   z-index: 3;
   align-items: center;
-  
-  h1 {
-    margin: 0 ${rem(24)};
-  }
+  padding: 0 ${rem(24)};
 `
 
 /**
@@ -25,7 +25,7 @@ const TopBarWrapper = styled.div`
 function TopBar() {
   return (
     <TopBarWrapper>
-      <h1>Freyja React</h1>
+      <SVGInline svg={logo} height="50%" width="50%" />
     </TopBarWrapper>
   )
 }

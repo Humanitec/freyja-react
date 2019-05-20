@@ -11,12 +11,12 @@ function CardPage() {
         This is the card header!
       </FjCard>
       <Highlight language="javascript">
-{`
-<FjCard
+{
+`<FjCard
   content="This is the card body!">
   This is the card header!
-</FjCard>
-`}
+</FjCard>`
+}
       </Highlight>
     </section>
   )
