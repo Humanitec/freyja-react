@@ -59,7 +59,8 @@ const listItems = [
   {label: 'Input Field', value: 'input-field'},
   {label: 'Menu', value: 'menu'},
   {label: 'Table', value: 'table'},
-]
+  {label: 'Toggle', value: 'toggle'},
+];
 
 /**
  * Component for the side navigation.
