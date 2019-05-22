@@ -8,7 +8,7 @@ coverage
 Dockerfile
 initialize_container.sh
 nginx.conf
-showcase
-src
+/showcase
+/src
 webpack.config.js
 webpack.lib.config.js
