@@ -67,6 +67,8 @@
       "freyja/Card": "<rootDir>/lib/src/Card",
       "freyja/ContentSwitcher": "<rootDir>/lib/src/ContentSwitcher",
       "freyja/TextField": "<rootDir>/lib/src/TextField",
+      "freyja/Table": "<rootDir>/lib/src/Table",
+      "freyja/Toggle": "<rootDir>/lib/src/Toggle",
       "freyja/InputField": "<rootDir>/lib/src/InputField",
       "freyja/InlineEditor": "<rootDir>/lib/src/InlineEditor",
       "theme": "<rootDir>/lib/theme"

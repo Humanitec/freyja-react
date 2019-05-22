@@ -4,7 +4,7 @@ import Highlight from 'react-highlight';
 
 function ButtonPage() {
   return (
-    <section>
+    <div className="page-content">
       <h3>Button</h3>
       <h4>Variants</h4>
       <FjButton>Primary</FjButton>
@@ -16,17 +16,19 @@ function ButtonPage() {
 }
       </Highlight>
       <h4>Sizes</h4>
+      <FjButton size="large">Large</FjButton>
       <FjButton>Default</FjButton>
       <FjButton size="small">Small</FjButton>
       <FjButton size="micro">Micro</FjButton>
       <Highlight language="javascript">
 {
-`<FjButton>Default</FjButton>
+`<FjButton size="large">Large</FjButton>
+<FjButton>Default</FjButton>
 <FjButton size="small">Small</FjButton>
 <FjButton size="micro">Micro</FjButton>`
 }
       </Highlight>
-    </section>
+    </div>
   )
 }
 

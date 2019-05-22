@@ -5,7 +5,7 @@ import Highlight from 'react-highlight';
 
 function TablePage() {
   return (
-    <section>
+    <div className="page-content">
       <h3>Table</h3>
       <FjTable
         columns={[
@@ -37,7 +37,7 @@ function TablePage() {
 />`
 }
       </Highlight>
-    </section>
+    </div>
   );
 }
 

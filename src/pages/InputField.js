@@ -5,7 +5,7 @@ import Highlight from 'react-highlight';
 function InputFieldPage() {
   const [inputValue, setInputValue] = useState('');
   return (
-    <section>
+    <div className="page-content">
       <h3>Input Field</h3>
       <FjInputField
         id="input" type="text" label="Label" value={inputValue} placeholder="placeholder"
@@ -24,7 +24,7 @@ function InputFieldPage() {
   required="true" />`
 }
       </Highlight>
-    </section>
+    </div>
   )
 }
 
