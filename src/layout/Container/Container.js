@@ -6,6 +6,7 @@ import InlineEditorPage from '../../pages/InlineEditor'
 import InputFieldPage from '../../pages/InputField'
 import MenuPage from '../../pages/Menu'
 import TablePage from '../../pages/Table'
+import TogglePage from '../../pages/Toggle'
 import styled from 'styled-components'
 import TopBar from '../TopBar/TopBar'
 import NavBar from '../NavBar/NavBar'
@@ -50,6 +51,9 @@ function Container({ page, setPage }) {
       break;
     case 'table':
       item = <TablePage />;
+      break;
+    case 'toggle':
+      item = <TogglePage />;
       break;
     default:
       item = <ButtonPage />;

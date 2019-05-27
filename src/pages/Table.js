@@ -5,14 +5,14 @@ import Highlight from 'react-highlight';
 
 function TablePage() {
   return (
-    <section>
+    <div className="page-content">
       <h3>Table</h3>
       <FjTable
         columns={[
-          { label: 'Full name', template: (item) => {return <b>{item.name}</b>}, flex: '1' },
+          { label: 'Full name', prop: 'name', template: (item) => {return <b>{item.name}</b>}, flex: '1' },
           { label: 'Email', prop: 'email', flex: '3' },
-          { label: 'Last activity', template: (item) => {return <small style={{'color': '#aaa'}}>{item.activity}</small>}, flex: '1' },
-          { label: 'Options', template: () => {return <FjButton variant="secondary" size="small">&hellip;</FjButton>}, flex: 'none' },
+          { label: 'Last activity', prop: 'activity', template: (item) => {return <small style={{'color': '#aaa'}}>{item.activity}</small>}, flex: '1' },
+          { label: 'Options', prop: 'options', template: () => {return <FjButton variant="secondary" size="small">&hellip;</FjButton>}, flex: 'none' },
         ]}
         rows={[
           { name: 'Arthur Bailey', email: 'arthur-93@example.com', activity: 'Today' },
@@ -37,7 +37,7 @@ function TablePage() {
 />`
 }
       </Highlight>
-    </section>
+    </div>
   );
 }
 

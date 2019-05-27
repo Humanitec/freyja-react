@@ -4,7 +4,7 @@ import Highlight from 'react-highlight';
 
 function CardPage() {
   return (
-    <section>
+    <div className="page-content">
       <h3>Card</h3>
       <FjCard
         content="This is the card body!">
@@ -18,7 +18,7 @@ function CardPage() {
 </FjCard>`
 }
       </Highlight>
-    </section>
+    </div>
   )
 }
 

@@ -11,9 +11,9 @@ function InlineEditorPage() {
   const [inlineLabelValue, setInlineLabelValue] = useState('This value is editable');
 
   return (
-    <section>
+    <div className="page-content">
     <h3>Freyja inline editor</h3>
-    <h3>Tags</h3>
+    <h4>Tags</h4>
     
     <FjInlineEditor
       id="inline-h1"
@@ -80,7 +80,7 @@ function InlineEditorPage() {
   onChange={e => setInlinePValue(e)} />`
 }
     </Highlight>
-    <h3>Labeled</h3>
+    <h4>Labeled</h4>
     <FjInlineEditor
       label="Label"
       id="with-label"
@@ -98,7 +98,7 @@ function InlineEditorPage() {
   onChange={e => setInlineLabelValue(e)} />`
 }
     </Highlight>
-  </section>
+  </div>
   )
 }
 
