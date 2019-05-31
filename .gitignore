@@ -4,5 +4,4 @@
 package-lock.json
 .idea/
 __snapshots__/
-__mocks__/
 coverage
