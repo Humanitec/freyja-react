@@ -7,14 +7,14 @@ function TogglePage() {
     <div className="page-content">
       <h3>Toggle</h3>
       <h4>States</h4>
-      <FjToggle checked={useState(false)} onChange={e => console.log('toggle is' + e)} />
+      <FjToggle checked={useState(false)} onChange={e => console.log('Toggle is ' + e)} />
       <Highlight language="javascript">
 {
 `<FjToggle checked={useState(false)} onChange={e => console.log('Toggle is ' + e)} />`
 }
       </Highlight>
 
-      <FjToggle checked={useState(true)} onChange={e => console.log('toggle is' + e)} />
+      <FjToggle checked={useState(true)} onChange={e => console.log('Toggle is ' + e)} />
       <Highlight language="javascript">
 {
 `<FjToggle checked={useState(true)} onChange={e => console.log('Toggle is ' + e)} />`
