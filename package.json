@@ -48,7 +48,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "test": "jest  --updateSnapshot --coverage",
+    "test-coverage": "jest --coverage",
+    "test": "jest",
+    "test-update": "jest --updateSnapshot",
     "serve": "./node_modules/.bin/serve -s dist",
     "serve-prod": "./node_modules/.bin/serve -s showcase",
     "build": "webpack --mode development",
