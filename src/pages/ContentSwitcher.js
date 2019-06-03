@@ -19,13 +19,13 @@ function ContentSwitcherPage() {
       <FjContentSwitcher options={options} active={switcherStateLarge} size="large" />
       <FjContentSwitcher options={options} active={switcherStateDefault} />
       <FjContentSwitcher options={options} active={switcherStateSmall} size="small" />
-      <FjContentSwitcher options={options} active={switcherStateMicro} size="micro" />
+      <FjContentSwitcher options={options} active={switcherStateMicro} disabled={true}  size="micro" />
       <Highlight language="javascript">
 {
 `<FjContentSwitcher options={options} active={switcherStateLarge} size="large" />
 <FjContentSwitcher options={options} active={switcherStateDefault} />
 <FjContentSwitcher options={options} active={switcherStateSmall} size="small" />
-<FjContentSwitcher options={options} active={switcherStateMicro} size="micro" />`
+<FjContentSwitcher options={options} active={switcherStateMicro} disabled={true}  size="micro" />`
 }
       </Highlight>
     </div>
