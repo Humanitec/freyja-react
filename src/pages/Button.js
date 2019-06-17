@@ -9,10 +9,12 @@ function ButtonPage() {
       <h4>Variants</h4>
       <FjButton>Primary</FjButton>
       <FjButton variant="secondary">Secondary</FjButton>
+      <FjButton variant="danger">Danger</FjButton>
       <Highlight language="javascript">
 {
 `<FjButton>Primary</FjButton>
-<FjButton variant="secondary">Secondary</FjButton>`
+<FjButton variant="secondary">Secondary</FjButton>
+<FjButton variant="danger">Danger</FjButton>`
 }
       </Highlight>
       <h4>Sizes</h4>
