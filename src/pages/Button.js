@@ -1,5 +1,5 @@
 import React from 'react';
-import { FjButton } from 'freyja/Button';
+import { FjButton, ButtonBase } from 'freyja/Button';
 import Highlight from 'react-highlight';
 
 function ButtonPage() {
@@ -10,6 +10,7 @@ function ButtonPage() {
       <FjButton>Primary</FjButton>
       <FjButton variant="secondary">Secondary</FjButton>
       <FjButton variant="danger">Danger</FjButton>
+      <ButtonBase> new test</ButtonBase>
       <Highlight language="javascript">
 {
 `<FjButton>Primary</FjButton>
