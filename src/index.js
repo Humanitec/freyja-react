@@ -5,7 +5,8 @@ import "./index.css";
 import { themeTest } from 'theme'
 import { ThemeProvider } from "styled-components";
 
-eactDOM.render(
+
+ReactDOM.render(
     <ThemeProvider theme={themeTest}>
         <App />
     </ThemeProvider>,
