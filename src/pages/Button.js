@@ -3,12 +3,16 @@ import { FjButton } from 'freyja/Button';
 import Highlight from 'react-highlight';
 import { createTheme } from 'theme'
 import { ThemeProvider } from "styled-components";
+import { withCustomTheme } from 'freyja/custom-theme/custom-theme'
+
+
 
 const themeColors = {
-    primary: '#1ddd28',
-    danger: '#aa0094',
+    primary: '#006385',
+    danger: '#aa7226',
 };
 
+const MyNewThemedButton = withCustomTheme(FjButton, createTheme(themeColors));
 
 function ButtonPage() {
   return (
@@ -19,7 +23,10 @@ function ButtonPage() {
       <FjButton variant="secondary">Secondary</FjButton>
       <FjButton variant="danger">Danger</FjButton>
 
-        <ThemeProvider theme={createTheme(themeColors)}  >
+        <ThemeProvider theme={createTheme({
+            primary: '#1ddd28',
+            danger: '#aa0094',
+        })}  >
             <div>
                 <div>
                     <FjButton>themed primary</FjButton>
@@ -29,6 +36,8 @@ function ButtonPage() {
                 </div>
             </div>
         </ThemeProvider>
+
+        <MyNewThemedButton> custom buttom </MyNewThemedButton>
       <Highlight language="javascript">
 {
 `<FjButton>Primary</FjButton>
@@ -41,7 +50,15 @@ you can also use themeProvider to pass your own theme to button.
         <FjButton>themed primary</FjButton>
         <FjButton variant="danger">Themed Danger</FjButton>
     </div>
-</ThemeProvider>`
+</ThemeProvider>
+
+
+you can also generate button with your own style using our pre-made button
+
+const MyNewThemedButton = withCustomTheme(FjButton, createTheme(themeColors));
+<MyNewThemedButton> custom buttom </MyNewThemedButton>
+
+`
 }
       </Highlight>
       <h4>Sizes</h4>
