@@ -1,6 +1,14 @@
 import React from 'react';
 import { FjButton } from 'freyja/Button';
 import Highlight from 'react-highlight';
+import { createTheme } from 'theme'
+import { ThemeProvider } from "styled-components";
+
+const themeColors = {
+    primary: '#1ddd28',
+    danger: '#aa0094',
+};
+
 
 function ButtonPage() {
   return (
@@ -10,11 +18,30 @@ function ButtonPage() {
       <FjButton>Primary</FjButton>
       <FjButton variant="secondary">Secondary</FjButton>
       <FjButton variant="danger">Danger</FjButton>
+
+        <ThemeProvider theme={createTheme(themeColors)}  >
+            <div>
+                <div>
+                    <FjButton>themed primary</FjButton>
+                </div>
+                <div>
+                    <FjButton variant="danger">Themed Danger</FjButton>
+                </div>
+            </div>
+        </ThemeProvider>
       <Highlight language="javascript">
 {
 `<FjButton>Primary</FjButton>
 <FjButton variant="secondary">Secondary</FjButton>
-<FjButton variant="danger">Danger</FjButton>`
+<FjButton variant="danger">Danger</FjButton>
+
+you can also use themeProvider to pass your own theme to button.
+<ThemeProvider theme={themeColors}  >
+    <div>
+        <FjButton>themed primary</FjButton>
+        <FjButton variant="danger">Themed Danger</FjButton>
+    </div>
+</ThemeProvider>`
 }
       </Highlight>
       <h4>Sizes</h4>
