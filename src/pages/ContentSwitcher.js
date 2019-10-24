@@ -7,12 +7,11 @@ function ContentSwitcherPage() {
   const switcherStateDefault = useState('option2');
   const switcherStateSmall = useState('option3');
   const switcherStateMicro = useState('option4');
-
   const switcherStateDisabled = useState('disabled');
   const switcherStateMultiple = useState(['option1', 'option2']);
-
   const switcherStateRequireNone = useState('option3');
   const switcherStateMultipleRequireNone = useState(['option1', 'option4']);
+  const switcherStateButtonsPerRow = useState(['option2', 'option4']);
 
   const options = [
     { value: 'option1', label: 'Option 1' },
@@ -60,6 +59,14 @@ function ContentSwitcherPage() {
 {
 `<FjContentSwitcher options={options} active={switcherStateRequireNone} requireOne={false} />
 <FjContentSwitcher options={options} active={switcherStateMultipleRequireNone} allowMultiple={true} requireOne={false} />`
+}
+      </Highlight>
+
+      <h4>Limit buttons per row</h4>
+      <FjContentSwitcher options={options} active={switcherStateButtonsPerRow} buttonsPerRow={3} />
+      <Highlight language="javascript">
+{
+`<FjContentSwitcher options={options} active={switcherStateButtonsPerRow} buttonsPerRow={3} />`
 }
       </Highlight>
     </div>
