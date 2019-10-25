@@ -1,9 +1,9 @@
 {
-  "name": "freyja-react",
-  "version": "0.1.24",
+  "name": "@buildlyio/freyja-react",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Humanitec/freyja-react.git"
+    "url": "git+https://github.com/buildlyio/freyja-react.git"
   },
   "description": "UI component library built using the React framework",
   "main": "dist/freyja.bundle.js",
@@ -51,8 +51,8 @@
     "test-coverage": "jest --coverage",
     "test": "jest",
     "test-update": "jest --updateSnapshot",
-    "serve": "./node_modules/.bin/serve -s dist",
-    "serve-prod": "./node_modules/.bin/serve -s showcase",
+    "serve": "serve -s dist",
+    "serve-prod": "serve -s showcase",
     "build": "webpack --mode development",
     "build-prod": "webpack --mode production",
     "build-freyja": "rm -rf ./dist && webpack --mode production --config webpack.lib.config.js",
@@ -97,5 +97,13 @@
     "Library"
   ],
   "author": "Andrew Shortall",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/buildlyio/freyja-react/issues"
+  },
+  "homepage": "https://github.com/buildlyio/freyja-react#readme",
+  "directories": {
+    "lib": "lib"
+  }
 }
