@@ -14,6 +14,30 @@ function CardPage() {
   return (
     <div className="page-content">
       <h3>Card</h3>
+      <h4>Size</h4>
+      <FjCard size="small">
+        Small
+      </FjCard>
+      <FjCard>
+        Medium
+      </FjCard>
+      <FjCard size="large">
+        Large
+      </FjCard>
+      <Highlight language="javascript">
+{
+`<FjCard size="small">
+  Small
+</FjCard>
+<FjCard>
+  Medium
+</FjCard>
+<FjCard size="large">
+  Large
+</FjCard>`
+}
+      </Highlight>
+
       <h4>Expandable</h4>
       <FjCard
         content="This is the card body!">
@@ -24,18 +48,6 @@ function CardPage() {
 `<FjCard
   content="This is the card body!">
   This is the card header!
-</FjCard>`
-}
-      </Highlight>
-
-      <h4>Non-expandable</h4>
-      <FjCard>
-        This card has no body!
-      </FjCard>
-      <Highlight language="javascript">
-{
-`<FjCard>
-  This card has no body!
 </FjCard>`
 }
       </Highlight>
