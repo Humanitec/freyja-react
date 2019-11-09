@@ -22,7 +22,13 @@ div.page-content {
   align-items: flex-start;
 }
 
-div.page-content > button {
+div.element-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+div.element-wrapper > button {
   margin: 4px 0;
 }
 
