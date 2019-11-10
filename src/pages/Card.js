@@ -1,13 +1,13 @@
 import React from 'react';
 import { FjCard } from 'freyja/Card';
 import Highlight from 'react-highlight';
-import {createTheme} from "theme";
+import { createTheme } from "theme";
 import { ThemeProvider } from "styled-components";
 
 const themeColors = {
-    lightGray: '#aa0094',
-    white: '#ff1a29',
-    text: '#ffffff'
+  lightGray: '#aa0094',
+  white: '#ff1a29',
+  text: '#ffffff'
 };
 
 function CardPage() {
