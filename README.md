@@ -6,7 +6,7 @@ Information on building and publishing the component library is available in the
 
 ## Building the showcase
 
-To build the showcase project simply run Run `npm run build-prod` to build the project. The build artifacts will be stored in the `showcase/` directory.
+To build the showcase project, you first need to install all dependencies/packages with `npm install` and then simply run `npm run build-prod` to build the project. The build artifacts will be stored in the `showcase/` directory.
 
 ## Development server
 
