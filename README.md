@@ -1,4 +1,4 @@
-# Buildly UI Library
+# Buildly UI React Library
 
 This project contains the source code of the Buildly UI React component library and a showcase for the different components.
 
