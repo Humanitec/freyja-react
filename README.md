@@ -1,6 +1,6 @@
-# Freyja React
+# Buildly UI Library
 
-This project contains the source code of the freyja-react UI component library and a showcase for the different components.
+This project contains the source code of the Buildly UI React component library and a showcase for the different components.
 
 Information on building and publishing the component library is available in the `README.md` inside the `lib/` directory.
 
